@@ -29,7 +29,7 @@
 </p>
 
 <h2>What the app collects</h2>
-<p><strong>Macro Dinner Planner does not collect any data from you.</strong> Every saved dinner, recipe, goal, and barcode lookup is stored only on your device, in the app's private Documents folder.</p>
+<p><strong>Macro Dinner Planner collects anonymous usage analytics only.</strong> When you have "Send anonymous usage stats" turned on in Settings → Privacy (default ON, easy to turn off), the app sends product-interaction events (e.g. "dinner_saved", "barcode_scanned"), crash data, and performance data to PostHog (an analytics provider). These events are <strong>not linked to you</strong> — no name, email, recipe text, contacts, or device identifier is sent — and are <strong>not used to track you</strong> across apps, advertisers, or networks. Your saved dinners, recipes, goals, and barcode lookups themselves are stored only on your device, in the app's private Documents folder.</p>
 <!--
   Examples you can edit into this block, driven by section 5 of the risk
   profile. Pick the one that matches and delete the others.
@@ -55,7 +55,7 @@
 <p>When you tap <strong>Scan barcode</strong> in the Analyze tab, the app makes a single unauthenticated GET request to <code>world.openfoodfacts.org/api/v2/product/{barcode}.json</code> to look up the product's nutrition info. No identifiers, account details, or device data are sent. If you never tap Scan, the app makes no network requests at all.</p>
 
 <h2>Third-party services</h2>
-<p>We do not embed third-party analytics, advertising, or tracking SDKs. The only third-party endpoint contacted is the public Open Food Facts barcode lookup described above, and only when you initiate a scan.</p>
+<p>Macro Dinner Planner uses a single third-party SDK: <strong>PostHog</strong> for the anonymous usage analytics described above (https://posthog.com/privacy). PostHog never receives your name, email, recipe text, contacts, or any user identifier. The other third-party endpoint contacted is the public <strong>Open Food Facts</strong> barcode lookup, and only when you tap Scan. No advertising or cross-app tracking SDKs are bundled.</p>
 <!--
   If the app uses PostHog, OpenFoodFacts, Firebase, Stripe, Anthropic,
   OpenAI, etc., list each here with a one-sentence description of what is
