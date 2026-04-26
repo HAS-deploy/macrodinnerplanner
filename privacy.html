@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Privacy Policy — Macro Dinner Planner</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+         max-width: 760px; margin: 40px auto; padding: 24px; line-height: 1.55;
+         color: #1a1a1a; background: #fff; }
+  h1, h2 { line-height: 1.2; }
+  h1 { font-size: 28px; margin-bottom: 8px; }
+  h2 { font-size: 20px; margin-top: 32px; }
+  .updated { color: #666; font-size: 14px; margin-bottom: 32px; }
+  a { color: #c2461d; }
+</style>
+</head>
+<body>
+
+<h1>Privacy Policy — Macro Dinner Planner</h1>
+<p class="updated">Last updated: 2026-04-25</p>
+
+<p>
+  This policy describes what data Macro Dinner Planner ("the app") collects, stores,
+  and shares. It is written to match the App Store Connect App Privacy
+  nutrition label exactly. If this document and the nutrition label ever
+  disagree, the nutrition label is wrong — let us know at
+  <a href="mailto:support@medbillresolve.com">support@medbillresolve.com</a>.
+</p>
+
+<h2>What the app collects</h2>
+<p><strong>Macro Dinner Planner does not collect any data from you.</strong> Every saved dinner, recipe, goal, and barcode lookup is stored only on your device, in the app's private Documents folder.</p>
+<!--
+  Examples you can edit into this block, driven by section 5 of the risk
+  profile. Pick the one that matches and delete the others.
+
+  "Nothing. Macro Dinner Planner does not collect any personal data. Everything you
+   enter stays on your device. There are no accounts, no analytics
+   transmitted off device, and no third-party SDKs that phone home."
+
+  "Only what you explicitly choose to export or share. The app stores your
+   data in a local SQLite database on your device. When you tap Share, you
+   select the destination — iMessage, Mail, Files, etc. — and the app hands
+   off the content to that destination via iOS share sheet."
+
+  "Minimal, for functionality only. We use no third-party SDK to (no analytics or tracking SDKs are integrated) which
+   transmits no data to no third party. We do not sell this data and
+   we do not use it for advertising."
+-->
+
+<h2>What the app stores locally</h2>
+<p>Saved dinners, your macro goals, and any barcode-scanned products are stored locally in <code>Documents/MDP/dinners.json</code>, <code>goals.json</code>, and <code>barcode_foods.json</code>. Removing the app from your device removes this data. The Settings tab also includes a one-tap "Reset all data" action.</p>
+
+<h2>What the app transmits</h2>
+<p>When you tap <strong>Scan barcode</strong> in the Analyze tab, the app makes a single unauthenticated GET request to <code>world.openfoodfacts.org/api/v2/product/{barcode}.json</code> to look up the product's nutrition info. No identifiers, account details, or device data are sent. If you never tap Scan, the app makes no network requests at all.</p>
+
+<h2>Third-party services</h2>
+<p>We do not embed third-party analytics, advertising, or tracking SDKs. The only third-party endpoint contacted is the public Open Food Facts barcode lookup described above, and only when you initiate a scan.</p>
+<!--
+  If the app uses PostHog, OpenFoodFacts, Firebase, Stripe, Anthropic,
+  OpenAI, etc., list each here with a one-sentence description of what is
+  sent and why. Link to each service's own privacy policy.
+
+  If the app uses NONE — say so explicitly: "The app does not use any
+  third-party analytics, advertising, or data-sharing services."
+-->
+
+<h2>Permissions we request</h2>
+<p><strong>Camera</strong> — used only when you tap Scan barcode. Camera frames are decoded locally for the barcode value and never recorded or transmitted. No other system permissions are requested.</p>
+<!--
+  For each permission checked in risk-profile section 7, one short paragraph:
+  what it enables, when the prompt appears, what happens if the user denies.
+-->
+
+<h2>Your controls</h2>
+<ul>
+  <li>Revoke any permission in iOS Settings → Macro Dinner Planner at any time.</li>
+  <li>Uninstall the app to remove all locally-stored data.</li>
+  <strong>Account deletion:</strong> Macro Dinner Planner has no accounts. To remove all data the app has stored on your device, open Settings → "Reset all data" and confirm, or simply delete the app.
+  <li>Contact us at <a href="mailto:support@medbillresolve.com">support@medbillresolve.com</a>
+      to request any data we hold or to ask a question about this policy.</li>
+</ul>
+
+<h2>Children</h2>
+<p>Macro Dinner Planner is rated 4+ and does not knowingly collect any data from anyone, including children. The app has no accounts, no advertising, no analytics, and no social features.</p>
+<!--
+  Default: "Macro Dinner Planner is not directed at children under 13. We do not
+  knowingly collect personal information from children under 13. If you
+  believe a child has used the app and entered personal data, contact us
+  and we'll delete it."
+-->
+
+<h2>Changes</h2>
+<p>
+  We'll update this page when the data we collect changes. The "Last
+  updated" date at the top reflects the most recent change. Material changes
+  (new data types, new third-party services) will also prompt an in-app
+  notice on next launch.
+</p>
+
+<h2>Contact</h2>
+<p>
+  Macro Dinner Planner is published by Tony McMurtrey. Email:
+  <a href="mailto:support@medbillresolve.com">support@medbillresolve.com</a>.
+</p>
+
+</body>
+</html>
