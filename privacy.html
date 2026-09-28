@@ -18,7 +18,7 @@
 <body>
 
 <h1>Privacy Policy — Macro Dinner Planner</h1>
-<p class="updated">Last updated: 2026-04-25</p>
+<p class="updated">Last updated: 2026-09-28</p>
 
 <p>
   This policy describes what data Macro Dinner Planner ("the app") collects, stores,
@@ -29,48 +29,27 @@
 </p>
 
 <h2>What the app collects</h2>
-<p><strong>Macro Dinner Planner collects anonymous usage analytics only.</strong> When you have "Send anonymous usage stats" turned on in Settings → Privacy (default ON, easy to turn off), the app sends product-interaction events (e.g. "dinner_saved", "barcode_scanned"), crash data, and performance data to PostHog (an analytics provider). These events are <strong>not linked to you</strong> — no name, email, recipe text, contacts, or device identifier is sent — and are <strong>not used to track you</strong> across apps, advertisers, or networks. Your saved dinners, recipes, goals, and barcode lookups themselves are stored only on your device, in the app's private Documents folder.</p>
-<!--
-  Examples you can edit into this block, driven by section 5 of the risk
-  profile. Pick the one that matches and delete the others.
-
-  "Nothing. Macro Dinner Planner does not collect any personal data. Everything you
-   enter stays on your device. There are no accounts, no analytics
-   transmitted off device, and no third-party SDKs that phone home."
-
-  "Only what you explicitly choose to export or share. The app stores your
-   data in a local SQLite database on your device. When you tap Share, you
-   select the destination — iMessage, Mail, Files, etc. — and the app hands
-   off the content to that destination via iOS share sheet."
-
-  "Minimal, for functionality only. We use no third-party SDK to (no analytics or tracking SDKs are integrated) which
-   transmits no data to no third party. We do not sell this data and
-   we do not use it for advertising."
--->
+<p><strong>Macro Dinner Planner collects anonymous usage analytics only.</strong> When you have "Send anonymous usage stats" turned on in Settings → Privacy (default ON, easy to turn off), the app sends product-interaction events (e.g. "dinner_saved", "barcode_scanned"), crash diagnostics and performance data (collected through Apple's MetricKit), and basic context such as app version, iOS version, locale, and App Store country to PostHog (an analytics provider). We do not use session replay, autocapture, or person profiles, and the app does not request App Tracking Transparency permission. These events are <strong>not linked to you</strong> — no name, email, recipe text, contacts, Apple ID, or advertising identifier is sent; events carry only a random identifier generated on your device for this install — and are <strong>not used to track you</strong> across apps, advertisers, or networks. Your saved dinners, recipes, goals, and barcode lookups themselves are stored only on your device, in the app's private Documents folder.</p>
 
 <h2>What the app stores locally</h2>
 <p>Saved dinners, your macro goals, and any barcode-scanned products are stored locally in <code>Documents/MDP/dinners.json</code>, <code>goals.json</code>, and <code>barcode_foods.json</code>. Removing the app from your device removes this data. The Settings tab also includes a one-tap "Reset all data" action.</p>
 
 <h2>What the app transmits</h2>
-<p>When you tap <strong>Scan barcode</strong> in the Analyze tab, the app makes a single unauthenticated GET request to <code>world.openfoodfacts.org/api/v2/product/{barcode}.json</code> to look up the product's nutrition info. No identifiers, account details, or device data are sent. If you never tap Scan, the app makes no network requests at all.</p>
+<p>Everything you enter (recipes, goals, diary, edits) stays on your device. The app contacts the network only for these purposes:</p>
+<ul>
+  <li><strong>Barcode lookup</strong> — when you tap <strong>Scan barcode</strong>, the scanned barcode number is sent to <code>world.openfoodfacts.org</code> to look up the product's nutrition info.</li>
+  <li><strong>Food search</strong> — when you analyze a recipe or search foods, ingredient names and search text are sent to USDA FoodData Central (<code>api.nal.usda.gov</code>) and Open Food Facts to look up nutrition.</li>
+  <li><strong>Recipe URL import</strong> — when you paste a recipe URL and tap Analyze, your device fetches that web page directly and parses it in memory. Nothing is logged to a server we control.</li>
+  <li><strong>Anonymous usage analytics and crash diagnostics</strong> — sent to PostHog as described above, unless you turn off "Send anonymous usage stats".</li>
+  <li><strong>Apple Search Ads attribution</strong> — on first launch the app asks Apple's AdServices framework for an anonymous attribution token so we can tell whether the install came from an Apple Search Ads campaign. No personal information is involved; you can turn off Apple's ad attribution in iOS Settings → Privacy &amp; Security → Apple Advertising.</li>
+</ul>
+<p>None of these requests include your name, email, contacts, or any account identifier.</p>
 
 <h2>Third-party services</h2>
 <p>Macro Dinner Planner uses a single third-party SDK: <strong>PostHog</strong> for the anonymous usage analytics described above (https://posthog.com/privacy). PostHog never receives your name, email, recipe text, contacts, or any user identifier. The other third-party endpoint contacted is the public <strong>Open Food Facts</strong> barcode lookup, and only when you tap Scan. No advertising or cross-app tracking SDKs are bundled.</p>
-<!--
-  If the app uses PostHog, OpenFoodFacts, Firebase, Stripe, Anthropic,
-  OpenAI, etc., list each here with a one-sentence description of what is
-  sent and why. Link to each service's own privacy policy.
-
-  If the app uses NONE — say so explicitly: "The app does not use any
-  third-party analytics, advertising, or data-sharing services."
--->
 
 <h2>Permissions we request</h2>
 <p><strong>Camera</strong> — used only when you tap Scan barcode. Camera frames are decoded locally for the barcode value and never recorded or transmitted. No other system permissions are requested.</p>
-<!--
-  For each permission checked in risk-profile section 7, one short paragraph:
-  what it enables, when the prompt appears, what happens if the user denies.
--->
 
 <h2>Your controls</h2>
 <ul>
@@ -82,13 +61,7 @@
 </ul>
 
 <h2>Children</h2>
-<p>Macro Dinner Planner is rated 4+ and does not knowingly collect any data from anyone, including children. The app has no accounts, no advertising, no analytics, and no social features.</p>
-<!--
-  Default: "Macro Dinner Planner is not directed at children under 13. We do not
-  knowingly collect personal information from children under 13. If you
-  believe a child has used the app and entered personal data, contact us
-  and we'll delete it."
--->
+<p>Macro Dinner Planner is rated 4+ and does not knowingly collect personal information from anyone, including children. The app has no accounts, no advertising, and no social features. The only data it collects is the anonymous usage analytics and crash diagnostics described above, which are not linked to anyone's identity and are never used for tracking or advertising.</p>
 
 <h2>Changes</h2>
 <p>
